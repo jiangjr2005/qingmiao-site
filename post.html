@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>博客文章 | 青苗助学计划</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ===== 顶部导航 ===== -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-icon">青</span>
+        <span>青苗助学计划<small>Qingmiao Education</small></span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <ul>
+          <li><a href="index.html">首页</a></li>
+          <li><a href="about.html">关于我们</a></li>
+          <li><a href="fundraise.html">发起筹款</a></li>
+          <li><a href="blog.html" class="active">博客</a></li>
+          <li><a href="contact.html">联系我们</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-red" href="fundraise.html">立即捐赠</a>
+      <button class="menu-btn" aria-label="打开菜单">☰</button>
+    </div>
+  </header>
+
+  <!-- ===== 文章页头 ===== -->
+  <section class="post-banner">
+    <div class="container">
+      <div class="crumbs"><a href="index.html">首页</a> / <a href="blog.html">博客</a> / <span id="crumb">文章</span></div>
+      <h1 id="ptitle">加载中…</h1>
+      <div class="post-meta"><span id="ptag"></span> · <span id="pdate"></span></div>
+    </div>
+  </section>
+
+  <!-- ===== 正文 + 侧栏 ===== -->
+  <section class="container post-layout">
+    <!-- 正文区 -->
+    <article class="post-main">
+      <div class="post-cover" id="pcover"></div>
+      <div class="post-content" id="pcontent"></div>
+      <div style="margin-top:30px;padding-top:20px;border-top:2px dashed #e7e0d2">
+        <a class="btn btn-green" href="fundraise.html">支持我们的工作</a>
+      </div>
+    </article>
+
+    <!-- 侧栏 -->
+    <aside class="post-side">
+      <h3>相关文章</h3>
+      <div id="related"></div>
+      <div class="side-about" style="margin-top:20px">
+        <h3>关于我们</h3>
+        <p>专注乡村儿童教育的公益助学组织。</p>
+        <a class="read-more" href="about.html">了解更多 →</a>
+      </div>
+    </aside>
+  </section>
+
+  <!-- ===== 页脚 ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="cols">
+        <div class="col">
+          <a class="logo" href="index.html" style="color:#fff;margin-bottom:12px">
+            <span class="logo-icon">青</span>
+            <span>青苗助学计划<small style="color:#8fa39b">Qingmiao Education</small></span>
+          </a>
+          <p style="margin-top:10px">乡村教育公益</p>
+        </div>
+        <div class="col">
+          <h4>快速链接</h4>
+          <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="fundraise.html">发起筹款</a></li>
+            <li><a href="blog.html">博客</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>联系方式</h4>
+          <ul>
+            <li>邮箱：contact@qingmiao.org</li>
+            <li>地址：河南省郑州市</li>
+            <li>工作日 9:00 - 18:00</li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom">
+        <span>© <span id="year">2026</span> 青苗助学计划 · 数据为示例</span>
+        <p style="margin-top:8px;font-size:12px;color:#8fa39b">本站为个人前端学习作品，机构与内容均为虚构，仅作技术展示；图片来源于公开网络，如有侵权请联系删除。</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="回到顶部">↑</button>
+
+  <script>
+    /* 文章数据：6 篇，结构为对象数组*/
+    var POSTS = [
+      {
+        id: 1, title: "乡村孩子的第一个图书角", tag: "项目进展", date: "2026-10-12",
+        color: "#2e9e63", cover: "assets/book.jpg",
+        blocks: [
+          { t: "p", c: "很多村小不是没有书，而是没有合适的书、没有能让孩子坐下来的阅读空间。" },
+          { t: "p", c: "这个十月，我们为贵州两所村小各建设了一间图书角：三个新书架、三百本精选童书、一套阅读桌椅。" },
+          { t: "h2", c: "放学后，谁都不肯走" },
+          { t: "p", c: "图书角落成那天，孩子们放学后都不肯走，围着书架一本一本地翻。下一步，我们计划配套“阅读打卡”活动。" }
+        ]
+      },
+      {
+        id: 2, title: "支教老师的一天", tag: "志愿者故事", date: "2026-09-18",
+        color: "#e14b3b", cover: "assets/teacher.jpg",
+        blocks: [
+          { t: "p", c: "今年暑假，26 名大学生志愿者分赴三所乡村学校支教。这是小王第一次真正走进山村。" },
+          { t: "p", c: "他的日程表很简单：六点起床早读，上午两节数学课，中午帮食堂打饭，下午英语课和兴趣小组，晚上备课到十点。" },
+          { t: "h2", c: "一个暑假，能改变什么？" },
+          { t: "p", c: "支教结束那天，孩子们追着大巴车跑了很远。小王说，哪怕只有一个孩子因此多读了一本书、多懂了一道题，就是值得的。" }
+        ]
+      },
+      {
+        id: 3, title: "一顿热乎的营养午餐", tag: "营养加餐", date: "2026-08-30",
+        color: "#f7b733", cover: "assets/lunch.jpg",
+        blocks: [
+          { t: "p", c: "在部分中西部寄宿学校，孩子们一周住在学校，营养跟不上，下午的课常常听得昏昏沉沉。" },
+          { t: "p", c: "营养加餐项目为两所寄宿学校的学生每周提供两次牛奶、鸡蛋和水果，并邀请营养师按季节调整食谱。" },
+          { t: "h2", c: "吃得好，才能学得好" },
+          { t: "p", c: "加餐之后，孩子们晚自习的精神头明显不一样了：请假的少了，课堂回答问题的多了。" }
+        ]
+      },
+      {
+        id: 4, title: "新学期，课堂搬进大山", tag: "项目进展", date: "2026-08-12",
+        color: "#2e7cc3", cover: "assets/remote.jpg",
+        blocks: [
+          { t: "p", c: "一所村小只有六位老师，美术课、科学课常年开不起来——这是很多乡村学校的真实困境。" },
+          { t: "p", c: "今年夏天，我们为合作学校建成了多媒体教室，并联合城市学校开设远程双师课堂。" },
+          { t: "h2", c: "山外的老师，山里的课堂" },
+          { t: "p", c: "开学第一个月，孩子们上了人生第一节美术课。远程课堂让“开不起来的课”第一次真正开起来了。" }
+        ]
+      },
+      {
+        id: 5, title: "为什么选择乡村", tag: "志愿者", date: "2026-07-20",
+        color: "#f0833b", cover: "assets/kids.jpg",
+        blocks: [
+          { t: "p", c: "“城市缺我一个实习生不少，山村缺一个老师很多。”这是今年志愿者招募时最打动我们的一句话。" },
+          { t: "p", c: "我们问了五位连续两年下乡的志愿者同一个问题：为什么选择乡村？答案都指向同一个词——被需要。" },
+          { t: "h2", c: "明年还来" },
+          { t: "p", c: "“孩子们喊老师好的时候，眼睛是发光的。”“我教的孩子第一次考及格，比我自己拿奖学金还高兴。”" }
+        ]
+      },
+      {
+        id: 6, title: "从图书角到“有光”的学校", tag: "机构故事", date: "2026-07-02",
+        color: "#237a4c", cover: "assets/school.jpg",
+        blocks: [
+          { t: "p", c: "2018 年，第一间图书角落成时，只有三个书架和一百多本旧书。团队就是几位支教老师。" },
+          { t: "p", c: "2020 年注册，2022 年第一批支教团出发，2024 年营养加餐送进寄宿学校。每一步都不快，但每一步都算数。" },
+          { t: "h2", c: "“有光”，是因为有人点灯" },
+          { t: "p", c: "今天，38 所学校的图书角、1,200 名受助学生、9 个省份。我们只是把一盏又一盏小灯，点到了孩子们伸手够得到的地方。" }
+        ]
+      }
+    ];
+
+    /* 默认第 1 篇 */
+    var params = new URLSearchParams(location.search);
+    var id = parseInt(params.get("id"), 10) || 1;
+    var post = null;
+    for (var i = 0; i < POSTS.length; i++) {
+      if (POSTS[i].id === id) { post = POSTS[i]; break; }
+    }
+    if (!post) { post = POSTS[0]; }
+
+    /* 填充标题、标签、日期、封面颜色 */
+    document.getElementById("crumb").textContent = post.title;
+    document.title = post.title + " | 青苗助学计划";
+    document.getElementById("ptitle").textContent = post.title;
+    document.getElementById("ptag").textContent = post.tag;
+    document.getElementById("pdate").textContent = post.date;
+    document.getElementById("pcover").style.background = "url('" + post.cover + "') center/cover no-repeat";
+
+    /* 拼出正文 HTML */
+    var html = "";
+    for (var j = 0; j < post.blocks.length; j++) {
+      var b = post.blocks[j];
+      if (b.t === "h2") { html += "<h2>" + b.c + "</h2>"; }
+      else { html += "<p>" + b.c + "</p>"; }
+    }
+    document.getElementById("pcontent").innerHTML = html;
+
+    /* 相关文章*/
+    var relatedHtml = "";
+    var count = 0;
+    for (var k = 0; k < POSTS.length && count < 3; k++) {
+      if (POSTS[k].id !== post.id) {
+        relatedHtml += '<a href="post.html?id=' + POSTS[k].id + '">' + POSTS[k].title + '</a>';
+        count++;
+      }
+    }
+    document.getElementById("related").innerHTML = relatedHtml;
+  </script>
+</body>
+
+</html>
